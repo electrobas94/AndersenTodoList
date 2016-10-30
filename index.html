@@ -48,14 +48,7 @@
                             Your ToDo list
                         </div>
                         <div class="panel-body">
-                            <ul class="list-group">
-                                <li class="list-group-item" ng-repeat="item in todo.file_todo_list track by $index">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                            </ul>
+                            <truelist data="todo.file_todo_list"></truelist>
                             <button class="btn btn-default col-sm-12"
                                     ng-click="todo.newTodoList()">
                                 New ToDo list
@@ -68,14 +61,7 @@
                             Your Metings list
                         </div>
                         <div class="panel-body">
-                            <ul class="list-group">
-                                <li class="list-group-item" ng-repeat="item in todo.file_meet_list track by $index">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                            </ul>
+                            <truelist data="todo.file_meet_list"></truelist>
                             <button class="btn btn-default col-sm-12" ng-click="todo.newMeetingList()">New meetings list</button>
                         </div>
                     </div>
@@ -85,14 +71,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Panel list</div>
                         <div class="panel-body">
-                            <ul class="list-group">
-                                <li class="list-group-item" ng-repeat="item in todo.active_list track by $index">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Complete</button>
-                                    </div>
-                                </li>
-                            </ul>
+                            <truelist data="todo.active_list"></truelist>
                             <button class="btn btn-default col-sm-12"
                                     ng-click="todo.newItem()">
                                 Add new
@@ -100,12 +79,13 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
+
         <script src="assets/lib/angular.min.js"></script>
         <script src="app/app.js"></script>
         <script src="app/controllers/todo_list.controller.js"></script>
+        <script src="app/modules/todo_app.components.js"></script>
+        <script src="app/modules/components/trueList/trueList.js"></script>
     </body>
 </html>
