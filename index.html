@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="todo_app">
     <head>
         <meta charset="utf-8">
         <title>My HTML File</title>
@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="assets/css/main.css" />
     </head>
     <body>
-        <div class="container">
+        <div class="container" ng-controller="TodoListController as todo">
 
             <div class="page-header">
                 <h1>ToDo list</h1>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-sm-4" id="rename_window">
                 <div class="panel panel-default">
                     <div class="panel-heading">New name</div>
@@ -49,38 +49,17 @@
                         </div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                                                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                                                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                                                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Rename</button>
-                                    </div>
-                                </li>
-                                                                <li class="list-group-item">
+                                <li class="list-group-item" ng-repeat="item in todo.file_todo_list track by $index">
                                     Cras justo odiodu <br>
                                     <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
                                         <button class="btn btn-default">Rename</button>
                                     </div>
                                 </li>
                             </ul>
-                            <button class="btn btn-default col-sm-12">New ToDo list</button>
+                            <button class="btn btn-default col-sm-12"
+                                    ng-click="todo.newTodoList()">
+                                New ToDo list
+                            </button>
                         </div>
                     </div>
 
@@ -90,13 +69,14 @@
                         </div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">Porta ac consectetur ac</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
+                                <li class="list-group-item" ng-repeat="item in todo.file_meet_list track by $index">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
                             </ul>
-                            <button class="btn btn-default col-sm-12">New meetings list</button>
+                            <button class="btn btn-default col-sm-12" ng-click="todo.newMeetingList()">New meetings list</button>
                         </div>
                     </div>
                 </div>
@@ -106,25 +86,17 @@
                         <div class="panel-heading">Panel list</div>
                         <div class="panel-body">
                             <ul class="list-group">
-                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Complete</button>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    Cras justo odiodu <br>
-                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
-                                        <button class="btn btn-default">Complete</button>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item" ng-repeat="item in todo.active_list track by $index">
                                     Cras justo odiodu <br>
                                     <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
                                         <button class="btn btn-default">Complete</button>
                                     </div>
                                 </li>
                             </ul>
+                            <button class="btn btn-default col-sm-12"
+                                    ng-click="todo.newItem()">
+                                Add new
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -133,5 +105,7 @@
 
         </div>
         <script src="assets/lib/angular.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controllers/todo_list.controller.js"></script>
     </body>
 </html>
