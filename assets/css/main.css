@@ -1,0 +1,22 @@
+.panel-heading{
+/*    height: 4vh;*/
+} 
+
+.btn-head{
+    display: inline-block;
+}
+
+.ctr-btn-item{
+    display: none;
+}
+.list-group-item:hover .ctr-btn-item{
+    display: block;
+}
+
+#login_window{
+    display: none;
+}
+
+#rename_window{
+    display: none;
+}

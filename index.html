@@ -1,8 +1,137 @@
-<html>
-  <head>
-    <title></title>
-    <meta content="">
-    <style></style>
-  </head>
-  <body></body>
+<!doctype html>
+<html ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>My HTML File</title>
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="page-header">
+                <h1>ToDo list</h1>
+                <small></small>
+            </div>
+
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4" id="login_window">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Login window</div>
+                    <div class="panel-body">
+                        <input type="text" placeholder="Enter username" class="form-control col-sm-12"/>
+                        <hr>
+                        <button class="btn btn-default col-sm-12">Login</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-4" id="rename_window">
+                <div class="panel panel-default">
+                    <div class="panel-heading">New name</div>
+                    <div class="panel-body">
+                        <span>Default users: user1, user2</span>
+                        <input type="text" placeholder="Enter new name for list" class="form-control col-sm-12"/>
+                        <hr>
+                        <button class="btn btn-default col-sm-6">Apply</button>
+                        <button class="btn btn-default col-sm-6">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-12">
+
+                <div class="col-sm-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Your ToDo list
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
+                                                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
+                                                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
+                                                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
+                                                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Rename</button>
+                                    </div>
+                                </li>
+                            </ul>
+                            <button class="btn btn-default col-sm-12">New ToDo list</button>
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Your Metings list
+                        </div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Cras justo odio</li>
+                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                <li class="list-group-item">Morbi leo risus</li>
+                                <li class="list-group-item">Porta ac consectetur ac</li>
+                                <li class="list-group-item">Vestibulum at eros</li>
+                            </ul>
+                            <button class="btn btn-default col-sm-12">New meetings list</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Panel list</div>
+                        <div class="panel-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Complete</button>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Complete</button>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    Cras justo odiodu <br>
+                                    <div class="ctr-btn-item"><button class="btn btn-default">Delete</button>
+                                        <button class="btn btn-default">Complete</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="assets/lib/angular.min.js"></script>
+    </body>
 </html>
