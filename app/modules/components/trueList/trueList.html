@@ -1,9 +1,9 @@
 <ul class="list-group">
-    <li class="list-group-item" ng-repeat="item in data track by $index">
+    <li class="list-group-item" ng-repeat="item in dataList track by $index">
         Cras justo odiodu <br>
         <div class="ctr-btn-item">
-            <button class="btn btn-default">Delete</button>
-            <button class="btn btn-default">Complete</button>
+            <button class="btn btn-default">{{dataBtnName1}}</button>
+            <button class="btn btn-default">{{dataBtnName2}}</button>
         </div>
     </li>
 </ul>

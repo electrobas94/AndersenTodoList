@@ -2,30 +2,29 @@
 
   angular
     .module('todo_app.components')
-    .directive('truelist', trueList);
+    .directive('trueList', trueList);
 
   function trueList() {
     var directive = {
       restrict: 'E',
       scope: {
-        data: '=',
-        index: '=',
-        Button1Name: '=',
-        Button2Name: '=',
-        Buton1Click: '&',
-        Buton2Click: '&'
+        dataList: '=list',
+        dataBtnName1: '@btnName1',
+        dataBtnName2: '@btnName2'
       },
       templateUrl: 'app/modules/components/trueList/trueList.html',
       link: link
     };
     return directive;
 
-    function link(scope, element, attrs) {
-      //scope.data = ['first', 'second', 'third'];
-      console.log(scope);
-      console.log(element);
-      console.log(attrs);
+    function link(scope, element, attrs) 
+    {
+        console.log(scope);
+        console.log(attrs);
+        console.log(element);
+        //scope.dataBtnName1 = attrs.dataBtnName1;
     }
+    
   }
 
 })();
