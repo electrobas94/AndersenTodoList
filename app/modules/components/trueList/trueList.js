@@ -19,10 +19,13 @@
 
     function link(scope, element, attrs) 
     {
-        console.log(scope);
-        console.log(attrs);
-        console.log(element);
-        //scope.dataBtnName1 = attrs.dataBtnName1;
+        if (attrs.btnName1 == undefined ){
+            attrs.btnName1 = "Rename";
+        }
+        
+        if (attrs.btnName2 == undefined ){
+            attrs.btnName2 = "Delete";
+        }
     }
     
   }

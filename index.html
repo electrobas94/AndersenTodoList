@@ -48,9 +48,7 @@
                             Your ToDo list
                         </div>
                         <div class="panel-body">
-                            <true-list data-list="todo.file_todo_list"  
-                                       data-btn-name1="Rename" 
-                                       data-btn-name2="Delete">
+                            <true-list data-list="todo.file_todo_list">
                             </true-list>
                             <button class="btn btn-default col-sm-12"
                                     ng-click="todo.newTodoList()">
@@ -64,9 +62,7 @@
                             Your Metings list
                         </div>
                         <div class="panel-body">
-                            <true-list data-list="todo.file_meet_list" 
-                                       data-btn-name1="Rename" 
-                                       data-btn-name2="Delete">
+                            <true-list data-list="todo.file_meet_list" >
                             </true-list>
                             <button class="btn btn-default col-sm-12" ng-click="todo.newMeetingList()">New meetings list</button>
                         </div>
@@ -78,8 +74,7 @@
                         <div class="panel-heading">Panel list</div>
                         <div class="panel-body">
                             <true-list data-list="todo.active_list" 
-                                       data-btn-name1="Rename" 
-                                       data-btn-name2="Delete">
+                                       data-btn-name1="Complete"> 
                             </true-list>
                             <button class="btn btn-default col-sm-12"
                                     ng-click="todo.newItem()">
